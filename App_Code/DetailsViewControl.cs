@@ -63,6 +63,7 @@ namespace CustomDetailsView
 
         private void DetailsView_PageIndexChanging(object sender, DetailsViewPageEventArgs e)
         {
+            //Set Page Index to New Page Index
             _detailsView.PageIndex = e.NewPageIndex;
 
             //Bind Details View

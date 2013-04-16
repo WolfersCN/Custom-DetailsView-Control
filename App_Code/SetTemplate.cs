@@ -7,7 +7,7 @@ namespace CustomDetailsView
     public class SetTemplate : ITemplate
     {
         private readonly DataControlRowType _dataControlRowType;
-        private readonly string _columnName;
+        private readonly string _fieldName;
 
         /// <summary>
         /// Constructor for SetTemplate
@@ -21,11 +21,11 @@ namespace CustomDetailsView
         /// Overload Constructor for SetTemplate
         /// </summary>
         /// <param name="dataControlRowType"></param>
-        /// <param name="columnName"></param>
-        public SetTemplate(DataControlRowType dataControlRowType, string columnName)
+        /// <param name="fieldName"></param>
+        public SetTemplate(DataControlRowType dataControlRowType, string fieldName)
         {
             _dataControlRowType = dataControlRowType;
-            _columnName = columnName;
+            _fieldName = fieldName;
         }
 
 
@@ -37,7 +37,7 @@ namespace CustomDetailsView
                     //Create new literal object
                     var header = new Literal
                                      {
-                                         Text = string.Format("<b>{0}</b>", _columnName)
+                                         Text = string.Format("<b>{0}</b>", _fieldName)
                                      };
 
                     //Add to container
